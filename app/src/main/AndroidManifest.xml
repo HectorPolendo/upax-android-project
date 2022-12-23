@@ -18,10 +18,10 @@
         android:theme="@style/Theme.AndroidProject"
         tools:targetApi="31">
         <activity
-            android:name=".ui.view.adapters.activities.InfoActivity"
+            android:name=".ui.view.activities.InfoActivity"
             android:exported="false"/>
         <activity
-            android:name=".ui.view.adapters.activities.SplashActivity"
+            android:name=".ui.view.activities.SplashActivity"
             android:exported="true">
 
             <intent-filter>
@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.view.adapters.activities.MainActivity"
+            android:name=".ui.view.activities.MainActivity"
             android:exported="false"/>
     </application>
 

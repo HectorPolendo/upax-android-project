@@ -1,4 +1,4 @@
-package com.upax.androidproject.ui.view.adapters.activities
+package com.upax.androidproject.ui.view.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

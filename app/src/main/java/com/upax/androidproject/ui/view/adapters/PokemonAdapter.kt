@@ -23,6 +23,8 @@ class PokemonAdapter(): RecyclerView.Adapter<PokemonAdapter.ViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+
         Glide.with(holder.itemView)
             .load(Constants.PATH_IMGS+pokemonList[position].id+Constants.FORMAT_IMG)
             .into(holder.binding.ivPokemon)

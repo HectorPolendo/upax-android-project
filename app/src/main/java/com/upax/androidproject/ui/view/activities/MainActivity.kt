@@ -1,4 +1,4 @@
-package com.upax.androidproject.ui.view.adapters.activities
+package com.upax.androidproject.ui.view.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -53,12 +53,12 @@ class MainActivity : AppCompatActivity() {
 
     fun itemsClicks(){
         mostPopularAdapter.onItemClick = {
-            startActivity(Intent(this, InfoActivity::class.java))
+            startActivity(Intent(this, InfoActivity::class.java).putExtra(Constants.POK_ID, it.id))
         }
     }
 
     fun subscribeObservers(){
-        pokemonViewModel.popular.observe(this, {
+        pokemonViewModel.pokemons.observe(this, {
             mostPopularAdapter.setPokemons(it as ArrayList<Pokemon>)
         })
     }

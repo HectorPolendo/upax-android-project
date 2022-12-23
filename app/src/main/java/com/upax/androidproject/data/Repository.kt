@@ -28,11 +28,6 @@ class Repository @Inject constructor(
         return response.map { it.entityToModel() }
     }
 
-    suspend fun getPokemonFromDatabaseById(id: Int): Pokemon{
-        val response: PokemonEntity = dao.readPokemonById(id)
-        return response.entityToModel()
-    }
-
     suspend fun deletePokemon(){
         dao.deletePokemon()
     }

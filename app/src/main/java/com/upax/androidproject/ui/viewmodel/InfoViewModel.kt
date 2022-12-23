@@ -11,16 +11,16 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class PokemonViewModel @Inject constructor(
+class InfoViewModel @Inject constructor(
     private val repository: Repository
 ): ViewModel() {
 
-    private val _pokemons = MutableLiveData<List<Pokemon>>()
-    val pokemons: LiveData<List<Pokemon>> get() = _pokemons
+    private val _pokemon = MutableLiveData<Pokemon>()
+    val pokemon: LiveData<Pokemon> get() = _pokemon
 
-    fun onCreate(){
+    fun onCreate(id: Int){
         viewModelScope.launch {
-            _pokemons.postValue(repository.getAllPokemonFromDatabase())
+            //_pokemon.postValue(repository.getPokemonFromApiById(id))
         }
     }
 }
